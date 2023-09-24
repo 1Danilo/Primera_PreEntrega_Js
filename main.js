@@ -19,7 +19,7 @@ function searchM(){
   let busqueda = parseInt(prompt("¿Que deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Zapatillas  \n 4 - Accesorios \n 5 - Salir"))
 
 
-  while (busqueda !== 5){
+  while (isNaN(busqueda) || busqueda === ""){
     if (busqueda === 1){
       let remeras_m = parseInt(prompt("Elegiste Remeras, seleccione una opción: \n 1 - Remera Element Summon \n 2 - Elegiste Remera DC Density Zone \n 3 - Elegiste Remera Santa Cruz Chest Assorted"))
 
