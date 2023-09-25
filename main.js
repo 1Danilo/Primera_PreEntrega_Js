@@ -190,6 +190,7 @@ function searchF() {
 
         default:
           alert("Opción NO Válida");
+          break;
       }
     }
   } while (busquedaF !== 3);
