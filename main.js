@@ -134,67 +134,67 @@ function searchM() {
 }
 
 
-function searchF(){
-
+function searchF() {
   let busquedaF;
-
-  do{
-    busquedaF = parseInt(prompt("¿Que deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Salir"))
-
+  
+  do {
+    busquedaF = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Zapatillas  \n 4 - Accesorios \n 5 - Salir"));
+    
     if (isNaN(busquedaF)) {
       alert("Ingrese un valor válido.");
-    } else{
+    } else {
       switch (busquedaF) {
-        case 1:{
+        case 1: {
           let remeras_f = parseInt(prompt("Elegiste Remeras, seleccione una opción: \n 1 - Remera DC Star Boxy \n 2 - Remera Y Tú Quique? Crop Futbol"))
 
-          switch(remeras_f){
+          switch (remeras_f) {
             case 1:
-              alert("Elegiste Remera: DC Star Boxy")
+              alert("Elegiste: Remera DC Star Boxy");
               break;
 
             case 2:
-              alert("Elegiste Remera: Y Tú Quique? Crop Futbol")
+              alert("Elegiste: Remera Y Tú Quique? Crop Futbol");
               break;
 
             default:
-            alert("Opción NO Valida")
-            break;
-          }
-        break;
-      }
-
-      case 2:{
-        let pantalones_f = parseInt(prompt("Elegiste Pantalones, seleccione una opción: \n 1 - Jogging Isabel la Católica Graffiti \n 2 - Jogging Isabel La Catolica Rustic Boy \n 3 - Jogging Rip Curl Essential"))
-
-        switch(pantalones_f){
-          case 1:{
-            alert("Elegiste Pantalones: Jogging Isabel la Católica Graffiti")
-            break;
-          }
-
-          case 2:{
-            alert("Elegiste Pantalones: Jogging Isabel La Catolica Rustic Boy")
-            break;
-          }
-
-          case 3:{
-            alert("Elegiste Pantalones: Jogging Rip Curl Essential")
-            break;
-          }
-
-            default:
-              alert("Opción NO Valida")
-            break;
+              alert("Opción NO Válida");
           }
           break;
         }
+
+        case 2: {
+          let pantalones_f = parseInt(prompt("Elegiste Pantalones, seleccione una opción: \n 1 - Jogging Isabel la Católica Graffiti \n 2 - Jogging Isabel La Catolica Rustic Boy \n 3 - Jogging Rip Curl Essential"))
+
+          switch (pantalones_f) {
+            case 1:
+              alert("Elegiste: Jogging Isabel la Católica Graffiti");
+              break;
+
+            case 2:
+              alert("Elegiste: Jogging Isabel La Catolica Rustic Boy");
+              break;
+
+            case 3:
+              alert("Elegiste: Jogging Rip Curl Essential");
+              break;
+
+            default:
+              alert("Opción NO Válida");
+          }
+          break;
+        }
+
+        case 3:
+          alert("Gracias por usar nuestro servicio. ¡Hasta luego!");
+          break;
+
+        default:
+          alert("Opción NO Válida");
       }
-
-    } 
-
-  }while(busquedaF !==3);
+    }
+  } while (busqueda !== 5);
 }
+
 genero()
 
 
