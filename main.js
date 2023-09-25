@@ -192,7 +192,7 @@ function searchF() {
           alert("Opción NO Válida");
       }
     }
-  } while (busqueda !== 5);
+  } while (busquedaF !== 3);
 }
 
 genero()
