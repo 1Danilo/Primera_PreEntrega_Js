@@ -1,16 +1,26 @@
 alert("Bienvenido a Clothes Commerce")
 
 function genero() {
-    seleccion = prompt("Elige tu género \n Masculino(m) \n Femenina (f)")
-    if(seleccion.toLowerCase() === "m"){
-      alert("sos masculino")
-      searchM()      
-    }else if(seleccion.toLowerCase() === "f"){
-      alert("sos femenino")
-      searchF()
-    }
-    else{
-      alert("Género no valido, por favor vuelva a Ingresar")
+    let seleccion;
+    while(true){
+      seleccion = prompt("Elige tu género \n Masculino(m) \n Femenina (f)")
+      if (seleccion === null){
+        return;
+      }
+
+      seleccion = seleccion.toLowerCase();
+      if (seleccion === "m"){
+        alert("Sos Masculino");
+        searchM();
+        break;
+      }else if (seleccion === "f"){
+        alert("Sos Femenino");
+        searchF();
+        break;
+      }else{
+        alert("Género no válido, por favor vuelve a ingresar.");
+      }
+
     }
 }
 
@@ -20,6 +30,10 @@ function searchM(){
 
 
   while (isNaN(busqueda) || busqueda === ""){
+
+    busqueda = parseInt(prompt("Ingrese un valor válido"))
+  }
+  while (busqueda !== 5){
     if (busqueda === 1){
       let remeras_m = parseInt(prompt("Elegiste Remeras, seleccione una opción: \n 1 - Remera Element Summon \n 2 - Elegiste Remera DC Density Zone \n 3 - Elegiste Remera Santa Cruz Chest Assorted"))
 
@@ -41,6 +55,7 @@ function searchM(){
 
         default:
           alert("Opción NO Válida")
+          break;
       }
 
       break;
@@ -68,6 +83,7 @@ function searchM(){
 
         default:
           alert("Opción NO Válida")
+          break;
       }
       
       break;
