@@ -28,7 +28,7 @@ function searchM() {
   let busqueda;
   
   do {
-    busqueda = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Salir  \n 4 - Accesorios \n 5 - Salir"));
+    busqueda = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Zapatillas  \n 4 - Accesorios \n 5 - Salir"));
     
     if (isNaN(busqueda)) {
       alert("Ingrese un valor válido.");
