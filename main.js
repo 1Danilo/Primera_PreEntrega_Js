@@ -31,7 +31,7 @@ function searchM() {
     busqueda = parseInt(prompt("¿Qué deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Zapatillas  \n 4 - Accesorios \n 5 - Salir"));
     
     if (isNaN(busqueda)) {
-      alert("Ingresa un valor válido.");
+      alert("Ingrese un valor válido.");
     } else {
       switch (busqueda) {
         case 1: {
@@ -136,55 +136,65 @@ function searchM() {
 
 function searchF(){
 
-  let busquedaF = parseInt(prompt("¿Que deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Salir"))
+  let busquedaF;
 
-  while (busquedaF !== 3){
-    
-    if (busquedaF === 1){
-      let remeras_f = parseInt(prompt("Elegiste Remeras, seleccione una opción: \n 1 - Remera DC Star Boxy \n 2 - Remera Y Tú Quique? Crop Futbol"))
+  do{
+    busquedaF = parseInt(prompt("¿Que deseas buscar?  \n 1 - Remeras \n 2 - Pantalones \n 3 - Salir"))
 
-      switch (remeras_f) {
-        case 1:
-          alert("Elegiste: Remera DC Star Boxy")
-          break;
-        
-        case 2:
-          alert("Elegiste: Remera Y Tú Quique? Crop Futbol")
-          break;
+    if (isNaN(busquedaF)) {
+      alert("Ingrese un valor válido.");
+    } else{
+      switch (busquedaF) {
+        case 1:{
+          let remeras_f = parseInt(prompt("Elegiste Remeras, seleccione una opción: \n 1 - Remera DC Star Boxy \n 2 - Remera Y Tú Quique? Crop Futbol"))
 
-        default:
-          break;
+          switch(remeras_f){
+            case 1:
+              alert("Elegiste Remera: DC Star Boxy")
+              break;
+
+            case 2:
+              alert("Elegiste Remera: Y Tú Quique? Crop Futbol")
+              break;
+
+            default:
+            alert("Opción NO Valida")
+            break;
+          }
+        break;
       }
 
-      break;
-    }
+      case 2:{
+        let pantalones_f = parseInt(prompt("Elegiste Pantalones, seleccione una opción: \n 1 - Jogging Isabel la Católica Graffiti \n 2 - Jogging Isabel La Catolica Rustic Boy \n 3 - Jogging Rip Curl Essential"))
 
-    if (busquedaF === 2){
-      let pantalones_f = parseInt(prompt("Elegiste Pantalones, seleccione una opción: \n 1 - Jogging Isabel la Católica Graffiti \n 2 - Jogging Isabel La Catolica Rustic Boy \n 3 - Jogging Rip Curl Essential"))
+        switch(pantalones_f){
+          case 1:{
+            alert("Elegiste Pantalones: Jogging Isabel la Católica Graffiti")
+            break;
+          }
 
-      switch (pantalones_f) {
-        case 1:
-          alert("Elegiste: Jogging Isabel la Católica Graffiti")
+          case 2:{
+            alert("Elegiste Pantalones: Jogging Isabel La Catolica Rustic Boy")
+            break;
+          }
+
+          case 3:{
+            alert("Elegiste Pantalones: Jogging Rip Curl Essential")
+            break;
+          }
+
+            default:
+              alert("Opción NO Valida")
+            break;
+          }
           break;
-        
-        case 2:
-          alert("Elegiste: Jogging Isabel La Catolica Rustic Boy")
-
-        case 3:
-          alert("Elegiste: Jogging Rip Curl Essential")
-        
-        default:
-          break;
+        }
       }
 
-      break;
-    }
+    } 
 
-    
-  }
-
+  }while(busquedaF !==3);
 }
-
 genero()
 
 
